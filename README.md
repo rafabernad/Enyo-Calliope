@@ -13,7 +13,8 @@ Calliope can be used as a standalone Enyo component:
 
     enyo.kind({
       name: "CalliopeStandaloneExample",
-      kind: "calliope"
+      kind: "calliope",
+      style: "width: 100%; height: 400px",
     });
 	
 or integrated with the Onyx library:
