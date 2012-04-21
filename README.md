@@ -39,6 +39,7 @@ The currently available Toolbar components are:
 
 But there are more coming:
 
+* `calliope.ToolbarSelect`: A select control for Calliope's Toolbar
 * `calliope.ToolbarButton`: A captioned button
 * `calliope.Input`: An editable Input for Calliope's Toolbar
 * `calliope.Label`: A label control to show information
