@@ -29,11 +29,19 @@ You can overwrite the default toolbar with a customized one easily. You just tak
 Toolbar Components
 ------------------
 
+The currently available Toolbar components are:
+
 * `calliope.ToolbarRow`: Aligns vertically ToolbarGroup or ToolbarButton elements.
 * `calliope.ToolbarGroup`: Groups horizontally ToolbarButton components. This is the `defaultKind` component for `Toolbar`, if not specified otherwise.
 * `calliope.ToolbarIcon`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
 
-With these three basic elements, you can make your own toolbars easily:
+But there are more coming:
+
+* `calliope.ToolbarButton`: A captioned button
+* `calliope.Input`: An editable Input for Calliope's Toolbar
+* `calliope.Label`: A label control to show information
+
+With these current three basic elements, you can make your own toolbars easily:
 
     enyo.kind({
       name: "CustomCalliopeToolbarSample",
