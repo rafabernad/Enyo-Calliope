@@ -114,9 +114,9 @@ To do so, just declare your custom `ToolbarIcon` with the following properties:
 
 * `src`: the url to the icon graphical asset
 * `command`: the DOM command to execute.
-* Optional `stateful`: set it to false if the button can't show the command state.
+* Optional `stateful`: set it to true if the button must show the command state (and the command allows it).
 
-Optionaly, you can use the standard `ToolbarIcon` kind to perform whatever operation you desire it to do:
+Optionaly, you can use the standard `ToolbarIcon` kind to perform whatever operation you desire it to do, just doesn't specify a `command`, and listent to the `onclick` event:
 
 	{
 		onclick: "customClickEvent",
