@@ -22,7 +22,8 @@ or integrated with the Onyx library:
       name: "CalliopeOnyxExample",
       kind: "onyx.InputDecorator",
       components: [{
-          kind: "calliope"
+          kind: "calliope",
+          style: "width: 100%; height: 100%",
       }]
     });
 
