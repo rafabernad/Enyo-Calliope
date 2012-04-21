@@ -1,21 +1,21 @@
 /*
 
-   Calliope v 0.1
-   Copyright 2012 Rafael Bernad de Castro
+ Calliope v 0.1
+ Copyright 2012 Rafael Bernad de Castro
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-   
-*/
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+ */
 
 enyo.kind({
 	name : 'calliope',
@@ -24,7 +24,9 @@ enyo.kind({
 	published : {
 		selection : null,
 		value : '',
-		toolbar : null
+		toolbar : null,
+		documentCss : "",
+		toolbarClass : "",
 	},
 	handlers : {
 		onExecuteCommand : "executeCommand",
@@ -82,13 +84,16 @@ enyo.kind({
 		this.inherited(arguments);
 		if(this.container.kind === "onyx.InputDecorator")
 			this.container.setTag("div");
+		this.documentCssChanged();
 		this.toolbarChanged();
 	},
 	rendered : function() {
 		this.inherited(arguments);
-		this.$.Editor.hasNode().contentWindow.document.write('<body>test</body>');
+		var emptyDocument = '<head><link id="document_stylesheet" type="text/css" rel="stylesheet" href="' + this.documentCss + '" /><head><body></body>'
+		this.$.Editor.hasNode().contentWindow.document.open();
+		this.$.Editor.hasNode().contentWindow.document.write(emptyDocument);
+		this.$.Editor.hasNode().contentWindow.document.close();
 		this.$.Editor.hasNode().contentWindow.document.body.contentEditable = true;
-		this.$.Editor.hasNode().contentWindow.stop();
 		this.editorWindow = this.$.Editor.hasNode().contentWindow;
 		this.editor = this.$.Editor.hasNode().contentWindow.document;
 		this.editorChangeListener = enyo.bind(this, 'updateToolbarStates');
@@ -98,8 +103,9 @@ enyo.kind({
 		this.editor.body.onkeyup = this.editorKeyUpListener;
 		this.editor.body.onfocus = this.editorFocusChangeListener;
 		this.editor.body.onblur = this.editorFocusChangeListener;
-		this.resizeHandler();
+		this.toolbarClassChanged();
 		this.valueChanged();
+		this.resizeHandler();
 		this.waterfallDown("onConfigureButtons");
 	},
 	destroy : function() {
@@ -114,8 +120,22 @@ enyo.kind({
 	valueChanged : function() {
 		this.editor.body.innerHTML = this.value;
 	},
+	documentCssChanged : function() {
+		if(!this.documentCss) {
+			this.documentCss = enyo.path.paths.calliope + "/document.css";
+		}
+		if(this.hasNode()) {
+			var styleSheetNode = this.$.Editor.hasNode().contentWindow.document.getElementById("document_stylesheet");
+			styleSheetNode.setAttribute("href", enyo.path.rewrite(this.documentCss));
+		}
+	},
 	getSelection : function() {
 		return this.editorWindow.getSelection();
+	},
+	toolbarClassChanged : function() {
+		if(this.hasNode())
+			if(this.tolbarClass)
+				this.$.Toolbar.setClassAttribute("calliope-toolbar " + this.toolbarClass);
 	},
 	toolbarChanged : function() {
 		this.$.Toolbar.destroyComponents();
@@ -183,6 +203,13 @@ enyo.kind({
 	},
 	focus : function() {
 		if(this.hasNode()) {
+			//Trick to get first time focus done programatically
+			if(!this.selection) {
+				var range = this.editor.createRange();
+				range.setStart(this.editor.body, 0);
+				range.setEnd(this.editor.body, 0);
+				this.editorWindow.getSelection().addRange(range);
+			}
 			this.editor.body.focus();
 		}
 	},
@@ -213,12 +240,12 @@ enyo.kind({
 	resizeHandler : function() {
 		this.inherited(arguments);
 		if(this.container.kind === "onyx.InputDecorator") {
-			this.$.Editor.applyStyle('height', this.container.hasNode().clientHeight + 'px');
-			this.$.Editor.applyStyle('width', this.container.hasNode().clientWidth + 'px');
+			this.$.Editor.applyStyle('height', this.hasNode().clientHeight + 'px');
+			this.$.Editor.applyStyle('width', this.hasNode().clientWidth + 'px');
 			this.editor.body.style.paddingTop = this.$.Toolbar.hasNode().clientHeight + 'px';
 		} else {
 			this.$.Editor.applyStyle('height', (this.hasNode().clientHeight - this.$.Toolbar.hasNode().clientHeight) + 'px');
-			this.$.Editor.applyStyle('height', this.hasNode().clientwidth + 'px');
+			this.$.Editor.applyStyle('width', this.hasNode().clientWidth + 'px');
 		}
 	}
 });
