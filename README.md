@@ -123,3 +123,14 @@ Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever 
 		onRefreshButtonState : "customStateRefresh",
 		stateful : true
 	}
+	
+* `stateful` tells the button to fire the `onRefreshButtonState` event, so you can apply your customizations.
+* `onclick` gets fired whem the user clicks the button, so you can do with it whatever you want it to.
+
+`onclick` event handling is as follows: 
+
+	customClicked: function(inSender, inDocument) {
+	
+		//inDocument is the editable document.
+		
+	}
