@@ -213,10 +213,12 @@ enyo.kind({
 	resizeHandler : function() {
 		this.inherited(arguments);
 		if(this.container.kind === "onyx.InputDecorator") {
-			this.$.Editor.applyStyle('height', this.hasNode().clientHeight + 'px');
+			this.$.Editor.applyStyle('height', this.container.hasNode().clientHeight + 'px');
+			this.$.Editor.applyStyle('width', this.container.hasNode().clientWidth + 'px');
 			this.editor.body.style.paddingTop = this.$.Toolbar.hasNode().clientHeight + 'px';
 		} else {
 			this.$.Editor.applyStyle('height', (this.hasNode().clientHeight - this.$.Toolbar.hasNode().clientHeight) + 'px');
+			this.$.Editor.applyStyle('height', this.hasNode().clientwidth + 'px');
 		}
 	}
 });
