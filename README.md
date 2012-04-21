@@ -151,4 +151,7 @@ Optionaly, you can use the standard `ToolbarIcon` kind to perform whatever opera
 
 Of course, this is the default behaviour... you can create your derived kinds overwriting the default `ToolbarIcon` `click` handling, to show a dialog or whatever, and of course, share it ;)
 
+License
+-------
+
 Calliope is released under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
