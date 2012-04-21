@@ -22,6 +22,8 @@ or integrated with the Onyx library:
       }]
     });
 
+You can use `getValue()` to get Calliope's document html content, and `setValue()` to overwrite it.
+
 Calliope comes with a predefined basic toolbar, that includes commands for font formatting (bold, italic, underline,strikethrough, fontsize), paraghraph alignment and format removing.
 
 You can overwrite the default toolbar with a customized one easily. You just take into account the following
