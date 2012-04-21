@@ -1,0 +1,301 @@
+/*
+
+   Calliope CSS styles v 0.1
+   Copyright 2012 Rafael Bernad de Castro
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+*/
+
+.calliope .editor-surface {
+	position: relative;
+}
+
+.calliope .calliope-toolbar {
+	position: relative;
+	left: 3px;
+	/*right: 15px;*/
+	padding-top: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+}
+
+.calliope .calliope-toolbar * {
+	display: inline-block;
+}
+
+.calliope .calliope-toolbar-row {
+	display: block;
+}
+
+.calliope .calliope-toolbar-row * {
+	display: inline-block;
+}
+
+.calliope .calliope-toolbar-group * {
+	display: inline-block;
+}
+
+.calliope-toolbar-group {
+	border: 1px solid;
+	padding: 0;
+	background: none;
+	border-color: rgba(0,0,0,0.2);
+	margin: 0px 3px 3px -3px;
+	margin-right: 6px;
+	/*padding: 5px;*/
+	
+}
+
+.calliope-toolbar-group > * {
+
+	margin: 3px;
+}
+
+.calliope-toolbar-select {
+	position: relative;
+	padding: 0px;
+	height: 32px;
+	vertical-align: middle;
+	
+}
+
+.calliope-toolbar-select select {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: inline;
+	-webkit-appearance: none;
+	opacity: 0;
+}
+
+.calliope-toolbar-select.select-decorator-disabled {
+	opacity: 0.4;
+}
+
+.calliope-toolbar-select.select-decorator-disabled select {
+	visibility: hidden;
+}
+
+.calliope-toolbar-select .calliope-toolbar-select-inner {
+	display: block;
+	padding: 7px 10px;
+}
+
+.calliope .calliope-toolbar .calliope-toolbar-group .calliope-toolbar-select-inner-text {
+	margin-top: 1px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+.calliope-toolbar-select-inner-arrow {
+	float: right;
+	margin-left: 7px;
+	width: 21px;
+	height: 21px;
+	background: url(images/menu-arrow.png) no-repeat center center;
+}
+
+.calliope iframe {
+	width: 100%;
+	background: white;
+}
+
+.onyx-input-decorator > .calliope {
+	/* reset */
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	font-size: 16px;
+	box-shadow: none;
+	/* FIXME: hack for styling reset on Android */
+	/* -webkit-appearance: caret;*/
+
+}
+
+.onyx-input-decorator > .calliope .calliope-toolbar {
+	position: absolute;
+	left: -3px;
+	/*right: 15px;*/
+	padding-top: 0;
+}
+
+.onyx-input-decorator > .calliope .calliope-toolbar-group {
+	border: 1px solid #3A3A3A;
+	padding: 0;
+	background: none;
+	border-color: rgba(0,0,0,0.1);
+	border-radius: 5px;
+	margin: 0px 3px 3px 0px;
+	margin-right: 6px;
+	/*padding: 5px;*/
+	opacity: 0.5;
+	
+}
+
+.onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-group {
+	background: #4C4C4C url(images/gradient.png) repeat-x 0 bottom;
+	border-color: rgba(0,0,0,0.2);
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+	opacity: 1;
+}
+
+.onyx-input-decorator > .calliope .calliope-toolbar-select {
+	position: relative;
+	padding: 0px;
+	height: 32px;
+	vertical-align: middle;
+	
+	color: #DADADA;
+	font-weight: bold;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.3), -1px 2px 2px rgba(0,0,0,0.3), 0px -1px 2px rgba(0,0,0,0.3);
+}
+
+.onyx-input-decorator > .calliope iframe {
+	border: none;
+	background: transparent;
+}
+
+.calliope .calliope-toolbar-icon {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 3px 2px 1px;
+	background-size: auto 64px;
+	background-position: 0 0;
+}
+
+.calliope .calliope-toolbar-icon.bold, .calliope .calliope-toolbar-icon.italic, .calliope .calliope-toolbar-icon.underline, .calliope .calliope-toolbar-icon.strikeThrough, .calliope .calliope-toolbar-icon.justifyCenter, .calliope .calliope-toolbar-icon.justifyFull, .calliope .calliope-toolbar-icon.justifyLeft, .calliope .calliope-toolbar-icon.justifyRight, .calliope .calliope-toolbar-icon.removeFormat {
+	background-image: url(images/formatting.png);
+}
+
+.onyx-input-decorator > .calliope .calliope-toolbar-icon.bold, .onyx-input-decorator > .calliope .calliope-toolbar-icon.italic, .onyx-input-decorator > .calliope .calliope-toolbar-icon.underline, .onyx-input-decorator > .calliope .calliope-toolbar-icon.strikeThrough, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyCenter, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyFull, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyLeft, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyRight, .onyx-input-decorator > .calliope .calliope-toolbar-icon.removeFormat {
+	background-image: url(images/onyx-formatting.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) , only screen and (-moz-min-device-pixel-ratio: 1.5) , only screen and (min-device-pixel-ratio: 1.5) {
+	.onyx-input-decorator > .calliope .calliope-toolbar-icon.bold, .onyx-input-decorator > .calliope .calliope-toolbar-icon.italic, .onyx-input-decorator > .calliope .calliope-toolbar-icon.underline, .onyx-input-decorator > .calliope .calliope-toolbar-icon.strikeThrough, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyCenter, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyFull, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyLeft, .onyx-input-decorator > .calliope .calliope-toolbar-icon.justifyRight, .onyx-input-decorator > .calliope .calliope-toolbar-icon.removeFormat {
+		background-image: url(images/onyx-formatting_2x.png);
+	}
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.active, .calliope.calliope-focused .calliope-toolbar-icon:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon:active:hover {
+	background-position: 0 -32px;
+}
+
+.calliope .calliope-toolbar-icon.italic {
+	background-position: -32px 0;
+}
+.calliope.calliope-focused .calliope-toolbar-icon.italic.active, .calliope.calliope-focused .calliope-toolbar-icon.italic:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.italic.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.italic:active:hover {
+	background-position: -32px -32px;
+}
+
+.calliope  .calliope-toolbar-icon.underline {
+	background-position: -64px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.underline.active, .calliope.calliope-focused .calliope-toolbar-icon.underline:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.underline.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.underline:active:hover {
+	background-position: -64px -32px;
+}
+
+.calliope .calliope-toolbar-icon.strikeThrough {
+	background-position: -96px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.strikeThrough.active, .calliope.calliope-focused .calliope-toolbar-icon.strikeThrough:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.strikeThrough.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.strikeThrough:active:hover {
+	background-position: -96px -32px;
+}
+
+.calliope .calliope-toolbar-icon.justifyLeft {
+	background-position: -128px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.justifyLeft.active, .calliope.calliope-focused .calliope-toolbar-icon.justifyLeft:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyLeft.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyLeft:active:hover {
+	background-position: -128px -32px;
+}
+
+.calliope .calliope-toolbar-icon.justifyCenter {
+	background-position: -160px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.justifyCenter.active, .calliope.calliope-focused .calliope-toolbar-icon.justifyCenter:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyCenter.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyCenter:active:hover {
+	background-position: -160px -32px;
+}
+
+.calliope-toolbar-group .calliope-toolbar-icon.justifyRight {
+	background-position: -192px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.justifyRight.active, .calliope.calliope-focused .calliope-toolbar-icon.justifyRight:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyRight.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyRight:active:hover {
+	background-position: -192px -32px;
+}
+
+.calliope .calliope-toolbar-icon.justifyFull {
+	background-position: -224px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.justifyFull.active, .calliope.calliope-focused .calliope-toolbar-icon.justifyFull:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyFull.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.justifyFull:active:hover {
+	background-position: -224px -32px;
+}
+
+.calliope-toolbar-group .calliope-toolbar-icon.removeFormat {
+	background-position: -256px 0;
+}
+
+.calliope.calliope-focused .calliope-toolbar-icon.removeFormat.active, .calliope.calliope-focused .calliope-toolbar-icon.removeFormat:active:hover, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.removeFormat.active, .onyx-input-decorator.onyx-focused > .calliope .calliope-toolbar-icon.removeFormat:active:hover {
+	background-position: -256px -32px;
+}
+
+.calliope-toolbar .onyx-button {
+	color: #F2F2F2;
+	background-color: #555656;
+	border-color: rgba(15, 15, 15, 0.5);
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 36px;
+}
+
+.calliope-toolbar .onyx-input-decorator {
+	margin: 1px 3px;
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,0.1);
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 0px 6px 5px 6px;
+}
+
+.calliope-toolbar .onyx-input-decorator.onyx-focused {
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,0.3);
+	background-color: white;
+}
+
+.calliope-toolbar .onyx-input-decorator .onyx-input {
+	color: #e5e5e5;
+	font-size: 14px;
+}
+
+.calliope-toolbar .onyx-input-decorator .onyx-input:focus {
+	color: #000;
+}
+
+.calliope-toolbar .onyx-input-decorator .onyx-input:focus::-webkit-input-placeholder {
+	color: #ddd;
+}
