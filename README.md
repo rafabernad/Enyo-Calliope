@@ -31,7 +31,7 @@ Toolbar Components
 
 * `calliope.ToolbarRow`: Aligns vertically ToolbarGroup or ToolbarButton elements.
 * `calliope.ToolbarGroup`: Groups horizontally ToolbarButton components. This is the `defaultKind` component for `Toolbar`, if not specified otherwise.
-* `calliope.ToolbarButton`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
+* `calliope.ToolbarIcon`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
 
 With these three basic elements, you can make your own toolbars easily:
 
@@ -65,7 +65,7 @@ With these three basic elements, you can make your own toolbars easily:
         }]
     });
                   
-This code creates a Calliope editor with a toolbar with two `ToolbarRow`; the first one shows a `ToolbarGroup` with two custom `ToolbarButton` inside for "copy" and "paste" actions, and the second one another `ToolbarGroup`with the predefined "bold" `ToolbarButton`.
+This code creates a Calliope editor with a toolbar with two `ToolbarRow`; the first one shows a `ToolbarGroup` with two custom `ToolbarIcon` inside for "copy" and "paste" actions, and the second one another `ToolbarGroup`with the predefined "bold" `ToolbarIcon`.
 
 But you don't need to deal with rows, if you don't want to:
 
@@ -93,30 +93,30 @@ But you don't need to deal with rows, if you don't want to:
       }]
     });
 
-This code creates a toolbar with one single ToolbarRow, with two `ToolbarGroup` inside it with the same `ToolbarButtons` setup as the previous sample.
+This code creates a toolbar with one single ToolbarRow, with two `ToolbarGroup` inside it with the same `ToolbarIcon` items setup as the previous example.
 
-Calliope resorts the Toolbar structure to match the size, so you don't have to deal with rows until necessary.
+Calliope resorts the toolbar structure to match the size, so you don't have to deal with rows if you don't want to.
 
-Predefined and Custom ToolbarButtons
------------------------------
+Predefined and Custom ToolbarIcons
+----------------------------------
 
-At this, moment, Calliope comes with a very little predefined set of `ToolbarButton`:
+At this, moment, Calliope comes with a very little predefined set of `ToolbarIcon`:
 
 * `bold`, `italic`, `underline`, `strikeThrough` : Sets formatting for typing, or applies it to selection
 * `justifyLeft`, `justifyCenter`, `justifyRight`, `justifyFull`: Applies paragraph justification.
 * `removeFormat`: removes formatting for current selection.
 
-These predefined buttons include their own graphical assets.
+These predefined `ToolbarIcon` items include their own graphical assets.
 
 The plan is to improve the predefined buttons set, but meanwhile, you can enable any of the DOM `execCommand` command.
 
-To do so, just declare your custom ToolbarButton with the following properties:
+To do so, just declare your custom `ToolbarIcon` with the following properties:
 
 * `src`: the url to the icon graphical asset
 * `command`: the DOM command to execute.
 * Optional `stateful`: set it to false if the button can't show the command state.
 
-Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever operation you desire it to do:
+Optionaly, you can use the standard `ToolbarIcon` kind to perform whatever operation you desire it to do:
 
 	{
 		onclick: "customClickEvent",
@@ -135,4 +135,4 @@ Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever 
 		
 	}
 
-Of course, this is the default behaviour... you can create your derived kinds overwriting the default `ToolbarIcon` onclick behaviour, to show a dialog, or whatever, and of course, share it ;)
+Of course, this is the default behaviour... you can create your derived kinds overwriting the default `ToolbarIcon` `click` handling, to show a dialog or whatever, and of course, share it ;)
