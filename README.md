@@ -9,7 +9,7 @@ Calliope can be used as a standalone Enyo component:
 
     enyo.kind({
       name: "CalliopeStandaloneExample",
-      kind: "com.Pre101.Masonry"
+      kind: "calliope"
     });
 	
 or integrated with the Onyx library:
@@ -50,7 +50,7 @@ With these three basic elements, you can make your own toolbars easily:
                       command: "copy",
                       stateful: false
                   }, {
-                      command: "paste",
+                      src: "paste.png",
                       command: "paste",
                       stateful: "false"
                   }]
@@ -104,7 +104,7 @@ Predefined and Custom ToolbarButtons
 At this, moment, Calliope comes with a very little predefined set of `ToolbarButton`:
 
 * `bold`, `italic`, `underline`, `strikeThrough` : Sets formatting for typing, or applies it to selection
-* `justifyLeft`, `justifyCenter`, justifyRight`, `justifyFull`: Applies paragraph justification.
+* `justifyLeft`, `justifyCenter`, `justifyRight`, `justifyFull`: Applies paragraph justification.
 * `removeFormat`: removes formatting for current selection.
 
 These predefined buttons include their own graphical assets.
