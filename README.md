@@ -17,7 +17,6 @@ or integrated with the Onyx library:
     enyo.kind({
       name: "CalliopeOnyxExample",
       kind: "onyx.InputDecorator",
-      tag: "div",
       components: [{
           kind: "calliope"
       }]
