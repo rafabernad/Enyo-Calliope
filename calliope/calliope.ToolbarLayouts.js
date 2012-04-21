@@ -19,15 +19,15 @@
 
 
 enyo.kind({
-	name : "calliope.ToolbarGroup",
+	name : "newness.Calliope.ToolbarGroup",
 	tag : "div",
-	defaultKind : "calliope.ToolbarIcon",
+	defaultKind : "newness.Calliope.ToolbarIcon",
 	classes : "calliope-toolbar-group"
 });
 
 enyo.kind({
-	name : "calliopeWidgets.ToolbarRow",
+	name : "newness.Calliope.ToolbarRow",
 	tag : "div",
-	defaultKind : "calliope.ToolbarGroup",
+	defaultKind : "newness.Calliope.ToolbarGroup",
 	classes : "calliope-toolbar-row"
 });

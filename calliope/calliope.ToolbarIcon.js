@@ -19,7 +19,7 @@
 
 
 enyo.kind({
-	name : "calliope.ToolbarIcon",
+	name : "newness.Calliope.ToolbarIcon",
 	published : {
 		// url path specifying the icon image
 		src : "",

@@ -18,7 +18,7 @@
  */
 
 enyo.kind({
-	name : 'calliope',
+	name : 'newness.Calliope',
 	kind : enyo.Control,
 	classes : "calliope",
 	published : {
@@ -73,7 +73,7 @@ enyo.kind({
 			name : 'Toolbar',
 			tag : 'div',
 			classes : "calliope-toolbar",
-			defaultKind : "calliope.ToolbarGroup",
+			defaultKind : "newness.Calliope.ToolbarGroup",
 			onmousedown : "toolbarMouseDown"
 		}, {
 			name : 'Editor',
