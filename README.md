@@ -134,3 +134,5 @@ Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever 
 		//inDocument is the editable document.
 		
 	}
+
+Of course, this is the default behaviour... you can create your derived kinds overwriting the default `ToolbarIcon` onclick behaviour, to show a dialog, or whatever, and of course, share it ;)
