@@ -1,3 +1,6 @@
+Calliope v 0.1
+==============
+
 Calliope is an extensible rich text editor based on [EnyoJS](http://www.enyojs.com).
 
 Calliope gets it's name from the muse of epic poetry in [Greek Mithology](http://en.wikipedia.org/wiki/Calliope), daughter of Zeus and Mnemosyne, and is believed to be Homer's muse, the inspiration for the Odyssey and the Iliad.
