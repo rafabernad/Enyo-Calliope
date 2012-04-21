@@ -116,4 +116,10 @@ To do so, just declare your custom ToolbarButton with the following properties:
 * `command`: the DOM command to execute.
 * Optional `stateful`: set it to false if the button can't show the command state.
 
-Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever operation you desire it to do.
+Optionaly, you can derive the standard `ToolbarButton` kind to perform whatever operation you desire it to do:
+
+	{
+		onclick: "customClickEvent",
+		onRefreshButtonState : "customStateRefresh",
+		stateful : true
+	}
