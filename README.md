@@ -107,8 +107,7 @@ This code creates a toolbar with one single ToolbarRow, with two `ToolbarGroup` 
 
 Calliope resorts the toolbar structure to match the size, so you don't have to deal with rows if you don't want to.
 
-Predefined and Custom ToolbarIcons
-__________________________________
+### Predefined and Custom ToolbarIcons
 
 At this, moment, Calliope comes with a very little predefined set of `ToolbarIcon`:
 
