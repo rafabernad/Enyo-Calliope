@@ -13,7 +13,7 @@ Calliope can be used as a standalone Enyo component:
 
     enyo.kind({
       name: "CalliopeStandaloneExample",
-      kind: "calliope",
+      kind: "newness.Calliope",
       style: "width: 100%; height: 400px",
     });
 	
@@ -23,7 +23,7 @@ or integrated with the Onyx library:
       name: "CalliopeOnyxExample",
       kind: "onyx.InputDecorator",
       components: [{
-          kind: "calliope",
+          kind: "newness.Calliope",
           style: "width: 100%; height: 100%",
       }]
     });
@@ -39,16 +39,16 @@ Toolbar Components
 
 The currently available Toolbar components are:
 
-* `calliope.ToolbarRow`: Aligns vertically ToolbarGroup or ToolbarButton elements.
-* `calliope.ToolbarGroup`: Groups horizontally ToolbarButton components. This is the `defaultKind` component for `Toolbar`, if not specified otherwise.
-* `calliope.ToolbarIcon`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
+* `newness.Calliope.ToolbarRow`: Aligns vertically ToolbarGroup or ToolbarButton elements.
+* `newness.Calliope.ToolbarGroup`: Groups horizontally ToolbarButton components. This is the `defaultKind` component for `Toolbar`, if not specified otherwise.
+* `newness.Calliope.ToolbarIcon`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
 
 But there are more coming:
 
-* `calliope.ToolbarSelect`: A select control for Calliope's Toolbar
-* `calliope.ToolbarButton`: A captioned button
-* `calliope.Input`: An editable Input for Calliope's Toolbar
-* `calliope.Label`: A label control to show information
+* `newness.Calliope.ToolbarSelect`: A select control for Calliope's Toolbar
+* `newness.Calliope.ToolbarButton`: A captioned button
+* `newness.Calliope.Input`: An editable Input for Calliope's Toolbar
+* `newness.Calliope.Label`: A label control to show information
 
 With these current three basic elements, you can make your own toolbars easily:
 
@@ -57,7 +57,7 @@ With these current three basic elements, you can make your own toolbars easily:
       kind: "Onyx.InputDecorator,
       tag: "div",
       components: [{
-          kind: "calliope",
+          kind: "newness.Calliope",
           components: [{
               kind: "calliope.ToolbarRow",
               components: [{
@@ -72,7 +72,7 @@ With these current three basic elements, you can make your own toolbars easily:
                   }]
               }]
           }, {
-              kind: "calliope.ToolbarRow",
+              kind: "newness.Calliope.ToolbarRow",
               components: [{
                   components: [{
                       command: "bold"
@@ -91,7 +91,7 @@ But you don't need to deal with rows, if you don't want to:
       kind: "Onyx.InputDecorator,
       tag: "div",
       components: [{
-          kind: "calliope",
+          kind: "newness.Calliope",
           components: [{
               components: [{
                   src: "copy.png",
