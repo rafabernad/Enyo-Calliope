@@ -1,4 +1,4 @@
-Calliope v 0.1
+Calliope v 0.2
 ==============
 
 
@@ -42,10 +42,10 @@ The currently available Toolbar components are:
 * `newness.Calliope.ToolbarRow`: Aligns vertically ToolbarGroup or ToolbarButton elements.
 * `newness.Calliope.ToolbarGroup`: Groups horizontally ToolbarButton components. This is the `defaultKind` component for `Toolbar`, if not specified otherwise.
 * `newness.Calliope.ToolbarIcon`: Default bi-state or single-state button. This is the `defaultKind` component for `ToolbarGroup`. More info below.
+* `newness.Calliope.ToolbarSelect`: A select control for Calliope's Toolbar
 
 But there are more coming:
 
-* `newness.Calliope.ToolbarSelect`: A select control for Calliope's Toolbar
 * `newness.Calliope.ToolbarButton`: A captioned button
 * `newness.Calliope.Input`: An editable Input for Calliope's Toolbar
 * `newness.Calliope.Label`: A label control to show information
@@ -123,6 +123,10 @@ At this, moment, Calliope comes with a very little predefined set of `ToolbarIco
 * `removeFormat`: removes formatting for current selection.
 
 These predefined `ToolbarIcon` items include their own graphical assets.
+
+There is also a predefined `ToolbarSelect`:
+
+* `newness.Calliope.ToolbarSelect.Fontsize`: Adjusts fontsize by percentage values.
 
 The plan is to improve the predefined buttons set, but meanwhile, you can enable any of the DOM `execCommand` command.
 
