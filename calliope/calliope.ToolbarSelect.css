@@ -1,0 +1,62 @@
+.calliope-toolbar-select {
+	position: relative;
+	padding: 0px;
+	height: 32px;
+	vertical-align: middle;
+	text-align: right;
+	font-weight: bold;
+	
+}
+
+.onyx-input-decorator > .calliope .calliope-toolbar-select {
+	position: relative;
+	padding: 0px;
+	height: 32px;
+	vertical-align: middle;
+	
+	color: #DADADA;
+	font-weight: bold;
+	font-size: 23px;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.3), -1px 2px 2px rgba(0,0,0,0.3), 0px -1px 2px rgba(0,0,0,0.3);
+}
+
+.calliope-toolbar-select select {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: inline;
+	-webkit-appearance: none;
+	opacity: 0;
+}
+
+.calliope-toolbar-select.select-decorator-disabled {
+	opacity: 0.4;
+}
+
+.calliope-toolbar-select.select-decorator-disabled select {
+	visibility: hidden;
+}
+
+.calliope-toolbar-select .calliope-toolbar-select-inner {
+	display: block;
+	padding: 7px 5px 10px;
+}
+
+.calliope .calliope-toolbar .calliope-toolbar-group .calliope-toolbar-select-inner-text {
+	margin-top: -3px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.calliope-toolbar-select-inner-arrow {
+	float: right;
+	margin-left: 7px;
+	margin-top: 1px;
+	width: 21px;
+	height: 21px;
+	background: url(images/menu-arrow.png) no-repeat center center;
+}
