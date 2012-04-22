@@ -59,7 +59,7 @@ With these current three basic elements, you can make your own toolbars easily:
       components: [{
           kind: "newness.Calliope",
           components: [{
-              kind: "calliope.ToolbarRow",
+              kind: "newness.Calliope.ToolbarRow",
               components: [{
                   components: [{
                       src: "copy.png",
