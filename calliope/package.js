@@ -2,5 +2,8 @@ enyo.depends(
 	"calliope.css",
 	"calliope.js",
 	"calliope.ToolbarLayouts.js",
-	"calliope.ToolbarIcon.js"
+	"calliope.ToolbarIcon.js",
+	"calliope.ToolbarSelect.js",
+	"calliope.ToolbarSelect.css",
+	"toolbarWidgets"
 );

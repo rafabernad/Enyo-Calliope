@@ -62,55 +62,6 @@
 	margin: 3px;
 }
 
-.calliope-toolbar-select {
-	position: relative;
-	padding: 0px;
-	height: 32px;
-	vertical-align: middle;
-	
-}
-
-.calliope-toolbar-select select {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	display: inline;
-	-webkit-appearance: none;
-	opacity: 0;
-}
-
-.calliope-toolbar-select.select-decorator-disabled {
-	opacity: 0.4;
-}
-
-.calliope-toolbar-select.select-decorator-disabled select {
-	visibility: hidden;
-}
-
-.calliope-toolbar-select .calliope-toolbar-select-inner {
-	display: block;
-	padding: 7px 10px;
-}
-
-.calliope .calliope-toolbar .calliope-toolbar-group .calliope-toolbar-select-inner-text {
-	margin-top: 1px;
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: left;
-}
-
-.calliope-toolbar-select-inner-arrow {
-	float: right;
-	margin-left: 7px;
-	width: 21px;
-	height: 21px;
-	background: url(images/menu-arrow.png) no-repeat center center;
-}
-
 .calliope iframe {
 	width: 100%;
 	background: white;
@@ -156,17 +107,6 @@
 	border-color: rgba(0,0,0,0.2);
 	box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
 	opacity: 1;
-}
-
-.onyx-input-decorator > .calliope .calliope-toolbar-select {
-	position: relative;
-	padding: 0px;
-	height: 32px;
-	vertical-align: middle;
-	
-	color: #DADADA;
-	font-weight: bold;
-	text-shadow: 1px 2px 2px rgba(0,0,0,0.3), -1px 2px 2px rgba(0,0,0,0.3), 0px -1px 2px rgba(0,0,0,0.3);
 }
 
 .onyx-input-decorator > .calliope iframe {

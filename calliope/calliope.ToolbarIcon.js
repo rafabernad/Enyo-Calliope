@@ -27,6 +27,11 @@ enyo.kind({
 		stateful : false,
 		command : ""
 	},
+	handlers : {
+		onRefreshButtons : "refreshButton",
+		onConfigureButtons : "configureButton",
+		onclick : "click"
+	},
 	classes : "calliope-toolbar-icon",
 	//* @protected
 	create : function() {
@@ -65,11 +70,6 @@ enyo.kind({
 	},
 	srcChanged : function() {
 		this.applyStyle("background-image", "url(" + enyo.path.rewrite(this.src) + ")");
-	},
-	handlers : {
-		onRefreshButtons : "refreshButton",
-		onConfigureButtons : "configureButton",
-		onclick : "click"
 	},
 	commandChanged : function() {
 		switch (this.command) {

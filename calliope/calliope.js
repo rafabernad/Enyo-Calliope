@@ -85,7 +85,7 @@ enyo.kind({
 		if(this.container.kind === "onyx.InputDecorator")
 			this.container.setTag("div");
 		this.documentCssChanged();
-		this.toolbarChanged();
+
 	},
 	rendered : function() {
 		this.inherited(arguments);
@@ -96,6 +96,7 @@ enyo.kind({
 		this.$.Editor.hasNode().contentWindow.document.body.contentEditable = true;
 		this.editorWindow = this.$.Editor.hasNode().contentWindow;
 		this.editor = this.$.Editor.hasNode().contentWindow.document;
+
 		this.editorChangeListener = enyo.bind(this, 'updateToolbarStates');
 		this.editorKeyUpListener = enyo.bind(this, 'editorKeyUp');
 		this.editorFocusChangeListener = enyo.bind(this, 'updateFocus');
@@ -105,6 +106,7 @@ enyo.kind({
 		this.editor.body.onblur = this.editorFocusChangeListener;
 		this.toolbarClassChanged();
 		this.valueChanged();
+		this.toolbarChanged();
 		this.resizeHandler();
 		this.waterfallDown("onConfigureButtons");
 	},
@@ -122,7 +124,7 @@ enyo.kind({
 	},
 	documentCssChanged : function() {
 		if(!this.documentCss) {
-			this.documentCss = enyo.path.paths.calliope + "/document.css";
+			this.documentCss = (enyo.path.paths.calliope !== undefined) ? (enyo.path.paths.calliope + "/document.css") : enyo.path.rewrite("document.css");
 		}
 		if(this.hasNode()) {
 			var styleSheetNode = this.$.Editor.hasNode().contentWindow.document.getElementById("document_stylesheet");
@@ -235,7 +237,6 @@ enyo.kind({
 		this.editor.body.focus();
 		this.editor.execCommand(inEvent.originator.command, false, ((!inEvent.originator.value) ? null : inEvent.originator.value));
 		this.updateToolbarStates();
-
 	},
 	resizeHandler : function() {
 		this.inherited(arguments);
