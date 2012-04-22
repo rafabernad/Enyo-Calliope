@@ -1,6 +1,6 @@
 /*
 
-   Calliope ToolbarIcon v 0.1
+   Calliope ToolbarIcon v 0.2
    Copyright 2012 Rafael Bernad de Castro
 
    Licensed under the Apache License, Version 2.0 (the "License");
