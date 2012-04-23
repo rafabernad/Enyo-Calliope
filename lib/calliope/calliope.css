@@ -63,10 +63,6 @@
 	margin: 3px;
 }
 
-.calliope-ios {
-	overflow-y: scroll;
-	-webkit-overflow-scrolling-y: touch;
-}
 .calliope iframe {
 	width: 100%;
 	height: 100%;
@@ -79,7 +75,7 @@
 	padding: 0;
 	border: none;
 	outline: none;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	background-color: transparent;
 	font-size: 16px;
 	box-shadow: none;
@@ -91,7 +87,6 @@
 .onyx-input-decorator > .calliope .calliope-toolbar {
 	position: absolute;
 	left: -3px;
-	/*right: 15px;*/
 	padding-top: 0;
 }
 
