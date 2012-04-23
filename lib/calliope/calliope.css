@@ -28,6 +28,7 @@
 	padding-top: 3px;
 	-webkit-user-select: none;
 	-moz-user-select: -moz-none;
+	z-index: 2;
 }
 
 .calliope .calliope-toolbar * {
@@ -62,8 +63,13 @@
 	margin: 3px;
 }
 
+.calliope-ios {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling-y: touch;
+}
 .calliope iframe {
 	width: 100%;
+	height: 100%;
 	background: white;
 }
 
